@@ -1,11 +1,11 @@
 import React from 'react'
-import Header from './Header'
+import Calculator from './Calculator'
 
 const App = () => {
     return (
-        <Header 
-            firstName = {'Marysia'}
-            lastName = {'Micek'}
+        <Calculator
+            a={5}
+            b={11}
         />
     )
 }

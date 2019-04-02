@@ -4,6 +4,7 @@ import Multiply from './Multiply'
 import Divide from './Divide'
 import Substract from "./Substract";
 
+const operations = [Add, Multiply, Divide, Substract]
 
 const Calculator = (props) => {
     return (
@@ -11,22 +12,16 @@ const Calculator = (props) => {
             <h2>
                 Liczby to: {props.a} i {props.b}
             </h2>
-            <Add
-                a={props.a}
-                b={props.b}
-            />
-            <Substract
-                a={props.a}
-                b={props.b}
-            />
-            <Multiply
-                a={props.a}
-                b={props.b}
-            />
-            <Divide
-                a={props.a}
-                b={props.b}
-            />
+
+            {
+                operations.map(
+                    Component =>
+                        <Component
+                            a={props.a}
+                            b={props.b}
+                        />
+                )
+            }
         </div>
     )
 }

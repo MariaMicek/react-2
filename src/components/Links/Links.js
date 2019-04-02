@@ -10,6 +10,9 @@ const Links = () => {
             <li>
                 <Link to={"/calculators"}>Calculators</Link>
             </li>
+            <li>
+                <Link to={"/mui-playground"}>Button</Link>
+            </li>
         </ul>
     )
 }

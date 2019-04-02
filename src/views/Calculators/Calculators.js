@@ -1,5 +1,5 @@
 import React from 'react'
-import Calculator from '../Calculator'
+import Calculator from '../../components/Calculator'
 
 const numbers = [
     { a: 5, b: 10 },

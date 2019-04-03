@@ -2,7 +2,16 @@ import React from 'react'
 import Paper from '@material-ui/core/Paper';
 
 const PaperRefined = (props) => {
-    return (
+
+    let childrenToRender = null
+
+    if (props.doNotDisplayChildren){        //we can use if, when it's in function body 
+        childrenToRender = null
+    } else {
+        childrenToRender = props.children
+    }
+
+    const renderComponent = (
         <div>
             <Paper
                 style={{
@@ -10,15 +19,12 @@ const PaperRefined = (props) => {
                     padding: '20px',
                 }}
             >
-            {
-                props.doNotDisplayChildren ?        //conditional rendering
-                null
-                :
-                props.children
-            }
+            {childrenToRender}
             </Paper>
         </div>
     )
+
+    return renderComponent          //different way to return component
 }
 
 export default PaperRefined

@@ -1,16 +1,13 @@
 import React from 'react'
 import Button from '@material-ui/core/Button';
-import Paper from '@material-ui/core/Paper';
+import PaperRefined from '../../components/PaperRefined';
 
 
 const MUIPlayground = () => {
     return (
         <div>
-            <Paper
-                style={{
-                    margin: '20px',
-                    padding: '20px',
-                }}
+            <PaperRefined
+                doNotDisplayChildren={true}
             >
                 <Button
                     variant={"contained"}
@@ -19,7 +16,8 @@ const MUIPlayground = () => {
                 >
                     Secondary
                 </Button>
-            </Paper>
+            </PaperRefined>
+            
         </div>
     )
 }
